@@ -1,0 +1,27 @@
+{
+  "name": "roshambo",
+  "version": "1.0.0",
+  "description": "Play rock paper scissors!",
+  "main": "bin/index.js",
+  "bin": {
+    "roshambo": "./bin/index.js"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Maple-Lazuli/Roshambo.git"
+  },
+  "keywords": [
+    "rock",
+    "paper",
+    "scissors"
+  ],
+  "author": "Ada Lazuli",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Maple-Lazuli/Roshambo/issues"
+  },
+  "homepage": "https://github.com/Maple-Lazuli/Roshambo#readme"
+}
