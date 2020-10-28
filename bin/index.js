@@ -1,4 +1,9 @@
 #!/usr/bin/env node
+const yargs = require('yargs/yargs')
+const { hideBin } = require('yargs/helpers')
+const argv = yargs(hideBin(process.argv)).argv
+
+
 class Move{
     constructor(play){  //The move that was played
         if(play.toLowerCase() === "paper"){
@@ -55,12 +60,27 @@ class PlayAgainstComputer{
         }
     }
 }
+
+
+
 //Verify Command Line Arguments
-if(process.argv.length < 3){
-    console.log("Must play a move (rock, paper, or scissors)")
+// if(process.argv.length < 3){
+//     console.log("Must play a move (rock, paper, or scissors)")
+//     return -1;
+// } else{
+//    player = new Move(process.argv[2])
+//    game = new PlayAgainstComputer(player)
+//    game.evalPlays()
+// }
+
+if(argv.move === undefined){
+    console.log("Show your moves! You need to play a move")
     return -1;
 } else{
-   player = new Move(process.argv[2])
+   player = new Move(argv.move)
    game = new PlayAgainstComputer(player)
    game.evalPlays()
 }
+
+
+
